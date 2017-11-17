@@ -181,6 +181,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+
 }
 
 .footer__topnav {
@@ -190,15 +191,14 @@ body {
     background-color: #dd550c;
     text-align: center;
     font-family: sans-serif;
-    color: white;
-    position: absolute;
+    color: white   
+}
+
+.footer__topnav {
+    position: relative;
     margin: 0;
     padding: 0;
     font-size: .8em;
-}
-
-.footer__topnav:hover {
-    top: -20px;
 }
 
 .footer__topnav h2 {
@@ -206,17 +206,8 @@ body {
     position: relative;
     z-index: 10;  
 }
-
-.footer__topnav--a {
-    left:-250px;
-}
-
 .footer__topnav--b {
     background-color: #f68026
-}
-
-.footer__topnav--c {
-    left:250px;
 }
 
 .footer__topnav--circle {
