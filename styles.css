@@ -1,13 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Eczar');
+
+body {
+    font-family: Eczar, sans-serif;
+}
+
+.jumbotron__content {
+    text-align: right;
+    margin : 0px;
+}
+
+.jumbotron__content h1,
+.jumbotron__content h2 {
+    margin : 0px;
+    padding: 0;
+}
+.jumbotron__content h2 {
+    font-size: .8em;
+}
+
+.content-container {
+    width: 80%;
+    margin: auto
+}
+
 body {
     margin: 0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    flex: 1;
 }
 
 .header__static {
     height: 40px;
-    background-color: #1e2426;
+    background-color: #03244d;
 }
 
 .header__nav {
@@ -32,7 +58,7 @@ body {
 }
 
 .header-nav__link:hover {
-    background-color: #f68026;
+    background-color: #dd550c;
     color: white;
 }
 
@@ -42,7 +68,7 @@ body {
 
 .jumbotron__logo {
     margin: 0;
-    padding: 50px;
+    padding: 50px 0;
     display: flex;
     height: 250px;
     justify-content: space-between
@@ -54,12 +80,100 @@ body {
 }
 
 .main {
-    height: 200px;
+    background-color: rgb(230, 230, 230);
+    min-height: 100vh;
+}
+
+.grid-item {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+}
+
+.item-a {
+    grid-area: item-a;
+    background-color: #03244d
+}
+.item-b {
+    grid-area: item-b;
+    background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fgreatist.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbig_share%2Fpublic%2Fhiit-workout_0.jpg%3Fitok%3DYJ3oSuGZ&f=1");
+    background-size: cover;
+}
+.item-c {
+    grid-area: item-c;
+    background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn-mf1.heartyhosting.com%2Fsites%2Fmensfitness.com%2Ffiles%2Fthe_10-minute_belly-off_workout_main.jpg&f=1");
+    background-size: cover;
+}
+.item-d {
+    grid-area: item-d;
+    background-image: url("https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.self.com%2Fphotos%2F5867a314bf5e49f716efe864%2Fmaster%2Fpass%2Fworkout-package_1.png&f=1");
+    background-size: cover;
+    background-position: center;
+}
+.item-e {
+    grid-area: item-e;
+    background-color: #dd550c;
+}
+.item-f {
+    grid-area: item-f;
+}
+.item-g {
+    grid-area: item-g;
+}
+.item-h {
+    grid-area: item-h;
+}
+.item-i {
+    grid-area: item-i;
+    background-color: #03244d
+}
+.item-j {
+    grid-area: item-j;
+}
+.item-k {
+    grid-area: item-k;
+}
+
+.container {
+    margin: 50px 0 50px;
+    display: grid;
+    grid: 
+        [row1-start] "item-a item-b item-b item-c item-c item-d item-d" auto [row1-end]
+        [row2-start] "item-a item-b item-b item-c item-c item-d item-d" auto [row2-end]
+        [row3-start] "item-e item-f item-f item-g item-g item-g item-g" auto [row3-end]
+        [row4-start] "item-h item-h item-h item-h item-h item-h item-h" auto [row4-end]
+        [row5-start] "item-i item-j item-j item-k item-k item-k item-k" auto [row5-end]
+        / auto;
+    grid-gap: 7px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.grid-item__drop-down {
+    position: relative;
+    top: 200px;
+    widows: 100%;
+    min-height: 200px;
+    background-color: rgba(0,0,0,.6);
+    transition: all .3s ease;
+    color: white;
+    text-align: center;
+}
+
+.grid-item__drop-down h2 {
+    margin:0;
+}
+
+
+.grid-item__drop-down:hover {
+    top: 50px;
+    transition: all .3s ease;
 }
 
 .footer {
     height: 300px;
-    background-color: #1e2426;
+    background-color: #03244d;
 }
 
 .footer__links {
@@ -69,16 +183,39 @@ body {
 }
 
 .footer__topnav {
-    line-height:60px;
-    width: 150px;
+    line-height:30px;
+    width: 250px;
     height: 60px;
-    background-color: #f68026;
+    background-color: #dd550c;
     text-align: center;
-    font-size: 1.7em;
     font-family: sans-serif;
     color: white   
 }
 
+.footer__topnav {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+}
+
+.footer__topnav h2 {
+    top: -4;
+    position: relative;
+    z-index: 10;  
+}
 .footer__topnav--b {
-    background-color: #f59c59
+    background-color: #f68026
+}
+
+.footer__topnav--circle {
+    position: absolute;
+    top: -24px;
+    left: 100px;
+    height: 50px;
+    width: 50px;
+    border-top-left-radius: 50%;  /* 100px of height + 10px of border */
+    border-top-right-radius: 50%;
+    background-color: inherit;
+    z-index: 1;
 }
