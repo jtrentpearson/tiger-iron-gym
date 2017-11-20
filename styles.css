@@ -63,20 +63,116 @@ body {
 }
 
 .header__jumbotron {
+    height: 350px;
+    overflow: hidden;
     background-color: #03244d;
+    position: relative;
+}
+
+.header__jumbotron input {
+    position: absolute;
+    z-index: 1000;
+    bottom: 10px;
+}
+
+#slide-1-trigger {
+    left: 47%;
+}
+
+#slide-2-trigger {
+    left: 50%;
+}
+
+#slide-3-trigger {
+    left: 53%;
+}
+
+input[type='radio']:after {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #f68026;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+
+input[type='radio']:checked:after {
+    position: relative;
+    background-color: #dd550c;
+} 
+
+.jumbotron__static-content{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 10%;
+    z-index: 1000;
+}
+
+.jumbotron__logo,
+.jumbotron__content {
+    position: absolute;
+    top: 0;
 }
 
 .jumbotron__logo {
-    margin: 0;
     padding: 50px 0;
-    display: flex;
+    height: 100%;
+    width: 100%;
     height: 250px;
-    justify-content: space-between
+    left: 0;
 }
 
 .jumbotron__content {
     width: 400px;
     color: white;
+    right: 0;
+}
+
+.jubotron__buttons{
+    text-align: center;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding:  8em 1em 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: left 0s .75s;
+}
+
+.slide-one {
+    background-color: white;
+    background-image: url('./images/background_1.jpg');
+}
+
+.slide-two {
+    background-color: black;
+    background-image: url('./images/background_2.jpg');
+}
+
+.slide-three {
+    background-color: firebrick;
+    background-image: url('./images/background_3.jpg');
+}
+
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
 }
 
 .main {
@@ -143,7 +239,7 @@ body {
         [row3-start] "item-e item-f item-f item-g item-g item-g item-g" 130px [row3-end]
         [row4-start] "item-h item-h item-h item-h item-h item-h item-h" 130px [row4-end]
         [row5-start] "item-i item-j item-j item-k item-k item-k item-k" 130px [row5-end]
-        / 130px 130px 130px 130px 130px 130px 130px; 
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     grid-gap: 7px;
     justify-items: stretch;
     align-items: stretch;
