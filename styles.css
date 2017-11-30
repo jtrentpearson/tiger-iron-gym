@@ -1,298 +1,327 @@
-@import url("https://fonts.googleapis.com/css?family=Eczar");
+@import url('https://fonts.googleapis.com/css?family=Eczar');
 
 body {
-  margin: 0;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  flex: 1;
-  font-family: sans-serif;
-}
-
-.content-container {
-  width: 80%;
-  margin: auto;
-}
-
-.header__static {
-  height: 50px;
-  background-color: #03244d;
-  display: flex;
-  font-family: sans-serif;
-}
-
-.static-header__hours {
-  color: #dd550c;
-  letter-spacing: 0.2em;
-  padding-top: 1em;
-  padding-left: 9.5em;
-}
-
-.static-header__links {
-  text-align: right;
-  margin:0;
-  position:absolute;
-  right: 9.5em;
-  color: #ffffff;
-  letter-spacing: .2em;
-  font-size: 1.2em;
-  margin-top: -.3em;
-}
-
-ul li a i:hover {
-  color: #ffffff;
-  transition: all 0.3s ease; 
-}
-
-li {
-	display:inline;
-	margin:0;
-}
-
-.header__nav {
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(230, 230, 230);
-}
-
-ul li a i {
-  color: #dd550c;
-  margin-right: 1em;
-}
-
-.nav-header__name,
-.nav-header__nav {
-  align-self: stretch;
-  line-height: 70px;
-}
-
-.nav-header__nav {
-  display: flex;
-}
-
-.nav-header__name {
-  letter-spacing: .45em;
-  font-size: 2.2em;
-  color: #03244d;
-  text-shadow: #dd550c 0 0 .2em;
-  font-weight: bold;
-}
-
-.header-nav__link {
-  width: 90px;
-  text-align: center;
-}
-
-.header-nav__link:hover {
-  background-color: #dd550c;
-  color: white;
-  transition: all 0.2s ease 0s;
-}
-
-.header__jumbotron {
-  background-color: #03244d;
+    font-family: Eczar, sans-serif;
 }
 
 .jumbotron__content {
-  text-align: right;
-  margin: 0px;
+    text-align: right;
+    margin : 0px;
 }
 
 .jumbotron__content h1,
 .jumbotron__content h2 {
-  margin: 0px;
-  padding: 0;
+    margin : 0px;
+    padding: 0;
+}
+.jumbotron__content h2 {
+    font-size: .8em;
 }
 
-.jumbotron__content h2 {
-  font-size: 0.8em;
+.content-container {
+    width: 80%;
+    margin: auto
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header__static {
+    height: 40px;
+    background-color: #03244d;
+}
+
+.header__nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header__name,
+.nav-header__nav {
+     align-self: stretch;
+     line-height: 70px;
+}
+
+.nav-header__nav {
+    display: flex;
+}
+
+.header-nav__link {
+    width: 90px;
+    text-align: center;
+}
+
+.header-nav__link:hover {
+    background-color: #dd550c;
+    color: white;
+}
+
+.header__jumbotron {
+    height: 350px;
+    overflow: hidden;
+    background-color: #03244d;
+    position: relative;
+}
+
+.header__jumbotron input {
+    position: absolute;
+    z-index: 1000;
+    bottom: 10px;
+}
+
+#slide-1-trigger {
+    left: 47%;
+}
+
+#slide-2-trigger {
+    left: 50%;
+}
+
+#slide-3-trigger {
+    left: 53%;
+}
+
+input[type='radio']:after {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #f68026;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+
+input[type='radio']:checked:after {
+    position: relative;
+    background-color: #dd550c;
+} 
+
+.jumbotron__static-content{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 10%;
+    z-index: 1000;
+}
+
+.jumbotron__logo,
+.jumbotron__content {
+    position: absolute;
+    top: 0;
 }
 
 .jumbotron__logo {
-  margin: 0;
-  padding: 50px 0;
-  display: flex;
-  height: 250px;
-  justify-content: space-between;
+    padding: 50px 0;
+    height: 100%;
+    width: 100%;
+    height: 250px;
+    left: 0;
 }
 
 .jumbotron__content {
-  width: 400px;
-  color: white;
+    width: 400px;
+    color: white;
+    right: 0;
+}
+
+.jubotron__buttons{
+    text-align: center;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding:  8em 1em 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: left 0s .75s;
+}
+
+.slide-one {
+    background-color: white;
+    background-image: url('./images/background_1.jpg');
+}
+
+.slide-two {
+    background-color: black;
+    background-image: url('./images/background_2.jpg');
+}
+
+.slide-three {
+    background-color: firebrick;
+    background-image: url('./images/background_3.jpg');
+}
+
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
 }
 
 .main {
-  background-color: rgb(230, 230, 230);
-  min-height: 100vh;
-}
-
-.container {
-  margin: 50px 0 50px;
-  display: grid;
-  grid: [row1-start] "item-a item-b item-b item-c item-c item-d item-d" auto
-    [row1-end] [row2-start] "item-a item-b item-b item-c item-c item-d item-d"
-    auto [row2-end] [row3-start]
-    "item-e item-f item-f item-g item-g item-g item-g" auto [row3-end]
-    [row4-start] "item-h item-h item-h item-h item-h item-h item-h" auto
-    [row4-end] [row5-start] "item-i item-j item-j item-k item-k item-k item-k"
-    auto [row5-end] / auto;
-  grid-gap: 0.65em;
-  justify-items: stretch;
-  align-items: stretch;
+    background-color: rgb(230, 230, 230);
+    min-height: 100vh;
 }
 
 .grid-item {
-  background-color: white;
-  overflow: hidden;
-  position: relative;
-  height: 250px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
 }
 
 .item-a {
-  grid-area: item-a;
-  background-color: #03244d;
+    grid-area: item-a;
+    background-color: #03244d
 }
 .item-b {
-  grid-area: item-b;
-  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fgreatist.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbig_share%2Fpublic%2Fhiit-workout_0.jpg%3Fitok%3DYJ3oSuGZ&f=1");
-  background-size: cover;
+    grid-area: item-b;
+    background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fgreatist.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbig_share%2Fpublic%2Fhiit-workout_0.jpg%3Fitok%3DYJ3oSuGZ&f=1");
+    background-size: cover;
 }
 .item-c {
-  grid-area: item-c;
-  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn-mf1.heartyhosting.com%2Fsites%2Fmensfitness.com%2Ffiles%2Fthe_10-minute_belly-off_workout_main.jpg&f=1");
-  background-size: cover;
+    grid-area: item-c;
+    background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn-mf1.heartyhosting.com%2Fsites%2Fmensfitness.com%2Ffiles%2Fthe_10-minute_belly-off_workout_main.jpg&f=1");
+    background-size: cover;
 }
 .item-d {
-  grid-area: item-d;
-  background-image: url("https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.self.com%2Fphotos%2F5867a314bf5e49f716efe864%2Fmaster%2Fpass%2Fworkout-package_1.png&f=1");
-  background-size: cover;
-  background-position: center;
+    grid-area: item-d;
+    background-image: url("https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.self.com%2Fphotos%2F5867a314bf5e49f716efe864%2Fmaster%2Fpass%2Fworkout-package_1.png&f=1");
+    background-size: cover;
+    background-position: center;
 }
 .item-e {
-  grid-area: item-e;
-  background-color: #dd550c;
+    grid-area: item-e;
+    background-color: #dd550c;
 }
 .item-f {
-  grid-area: item-f;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-handsome-man-doing-biceps-lifting-barbell-on-bench-in-a-gym-577492996.jpg);
-  background-size: cover;
+    grid-area: item-f;
 }
-
 .item-g {
-  grid-area: item-g;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-men-with-battle-rope-in-functional-training-fitness-gym-363373637.jpg);
-  background-size: cover;
+    grid-area: item-g;
 }
-
 .item-h {
-  grid-area: item-h;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-loft-big-empty-interior-of-the-gym-for-fitness-workout-cross-power-training-nobody-ropes-rowing-677437255.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+    grid-area: item-h;
 }
-
 .item-i {
-  grid-area: item-i;
-  background-color: #03244d;
+    grid-area: item-i;
+    background-color: #03244d
 }
 .item-j {
-  grid-area: item-j;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-handsome-weightlifter-preparing-for-training-shallow-depth-of-field-selective-focus-on-hands-and-366605333.jpg);
-  background-size: cover;
+    grid-area: item-j;
 }
 .item-k {
-  grid-area: item-k;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-young-man-and-woman-wearing-training-hardly-on-cycling-machines-in-light-spacious-gym-564014422.jpg);
-  background-size: cover;
+    grid-area: item-k;
+}
+
+.container {
+    margin: 75px auto;
+    display: grid;
+    grid:    
+        [row1-start] "item-a item-b item-b item-c item-c item-d item-d" 130px [row1-end]
+        [row2-start] "item-a item-b item-b item-c item-c item-d item-d" 130px [row2-end]
+        [row3-start] "item-e item-f item-f item-g item-g item-g item-g" 130px [row3-end]
+        [row4-start] "item-h item-h item-h item-h item-h item-h item-h" 130px [row4-end]
+        [row5-start] "item-i item-j item-j item-k item-k item-k item-k" 130px [row5-end]
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-gap: 7px;
+    justify-items: stretch;
+    align-items: stretch;
 }
 
 .grid-item__drop-down {
-  position: relative;
-  top: 200px;
-  widows: 100%;
-  min-height: 200px;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: all 0.3s ease;
-  color: white;
-  text-align: center;
+    position: relative;
+    top: 220px;
+    widows: 100%;
+    min-height: 240px;
+    background-color: rgba(0,0,0,.6);
+    transition: all .3s ease;
+    color: white;
+    text-align: center;
 }
 
 .grid-item__drop-down h2 {
-  margin: 0;
+    margin:0;
 }
 
+
 .grid-item__drop-down:hover {
-  top: 50px;
-  transition: all 0.3s ease;
+    top: 50px;
+    transition: all .3s ease;
 }
 
 .footer {
-  height: 300px;
-  background-color: #03244d;
+    position: relative;
+    height: 300px;
+    background-color: #03244d;
 }
 
 .footer__links {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: -50px;
+    overflow: hidden;
+    height: 120px;
+
 }
 
 .footer__topnav {
-  line-height: 30px;
-  width: 250px;
-  height: 60px;
-  background-color: #dd550c;
-  text-align: center;
-  font-family: sans-serif;
-  color: white;
+    line-height:30px;
+    width: 250px;
+    height: 100px;
+    background-color: #dd550c;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    top: 50px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: .8em;
+    transition: all .3s ease;
 }
 
-.footer__topnav {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 0.8em;
+.footer__topnav:hover {
+    top: 25px;
+    transition: all .3s ease;
 }
 
 .footer__topnav h2 {
-  top: -4;
-  position: relative;
-  z-index: 10;
+    top: -4;
+    position: relative;
+    z-index: 10;  
 }
 .footer__topnav--b {
-  background-color: #f68026;
+    background-color: #f68026
 }
 
 .footer__topnav--circle {
-  position: absolute;
-  top: -24px;
-  left: 100px;
-  height: 50px;
-  width: 50px;
-  border-top-left-radius: 50%; /* 100px of height + 10px of border */
-  border-top-right-radius: 50%;
-  background-color: inherit;
-  z-index: 1;
+    position: absolute;
+    top: -24px;
+    left: 100px;
+    height: 50px;
+    width: 50px;
+    border-top-left-radius: 50%;  /* 100px of height + 10px of border */
+    border-top-right-radius: 50%;
+    background-color: inherit;
+    z-index: 1;
 }
-
-.footer__bottomnav {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  font-size: 2em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
