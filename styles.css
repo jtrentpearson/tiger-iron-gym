@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Eczar");
+@import url('https://fonts.googleapis.com/css?family=Eczar');
 
 body {
   margin: 0;
@@ -42,34 +42,32 @@ body {
   color: #ffffff;
   letter-spacing: .2em;
   font-size: 1.2em;
+
 }
 
-ul li a i:hover {
-  color: #ffffff;
-  transition: all 0.3s ease; 
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    flex: 1;
 }
 
-li {
-	display:inline;
-	margin:0;
+.header__static {
+    height: 40px;
+    background-color: #03244d;
 }
 
 .header__nav {
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(230, 230, 230);
-}
-
-ul li a i {
-  color: #dd550c;
-  margin-right: 1em;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-header__name,
 .nav-header__nav {
-  align-self: stretch;
-  line-height: 70px;
+     align-self: stretch;
+     line-height: 70px;
 }
 
 .nav-header__nav {
@@ -82,17 +80,17 @@ ul li a i {
   color: #03244d;
   text-shadow: #dd550c 0 0 .2em;
   font-weight: bold;
+
 }
 
 .header-nav__link {
-  width: 90px;
-  text-align: center;
+    width: 90px;
+    text-align: center;
 }
 
 .header-nav__link:hover {
-  background-color: #dd550c;
-  color: white;
-  transition: all 0.2s ease 0s;
+    background-color: #dd550c;
+    color: white;
 }
 
 .header__jumbotron {
@@ -213,109 +211,133 @@ input[type='radio']:checked:after {
   transition: left .65s ease-out;
 }
 
-.main {
-  background-color: rgb(230, 230, 230);
-  min-height: 100vh;
+.jubotron__buttons{
+    text-align: center;
 }
 
-.container {
-  margin: 50px 0 50px;
-  display: grid;
-  grid: [row1-start] "item-a item-b item-b item-c item-c item-d item-d" auto
-    [row1-end] [row2-start] "item-a item-b item-b item-c item-c item-d item-d"
-    auto [row2-end] [row3-start]
-    "item-e item-f item-f item-g item-g item-g item-g" auto [row3-end]
-    [row4-start] "item-h item-h item-h item-h item-h item-h item-h" auto
-    [row4-end] [row5-start] "item-i item-j item-j item-k item-k item-k item-k"
-    auto [row5-end] / auto;
-  grid-gap: 0.65em;
-  justify-items: stretch;
-  align-items: stretch;
+.slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding:  8em 1em 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: left 0s .75s;
+}
+
+.slide-one {
+    background-color: white;
+    background-image: url('./images/background_1.jpg');
+}
+
+.slide-two {
+    background-color: black;
+    background-image: url('./images/background_2.jpg');
+}
+
+.slide-three {
+    background-color: firebrick;
+    background-image: url('./images/background_3.jpg');
+}
+
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
+}
+
+.main {
+    background-color: rgb(230, 230, 230);
+    min-height: 100vh;
 }
 
 .grid-item {
-  background-color: white;
-  overflow: hidden;
-  position: relative;
-  height: 250px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
 }
 
 .item-a {
-  grid-area: item-a;
-  background-color: #03244d;
+    grid-area: item-a;
+    background-color: #03244d
 }
 .item-b {
-  grid-area: item-b;
-  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fgreatist.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbig_share%2Fpublic%2Fhiit-workout_0.jpg%3Fitok%3DYJ3oSuGZ&f=1");
-  background-size: cover;
+    grid-area: item-b;
+    background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fgreatist.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fbig_share%2Fpublic%2Fhiit-workout_0.jpg%3Fitok%3DYJ3oSuGZ&f=1");
+    background-size: cover;
 }
 .item-c {
-  grid-area: item-c;
-  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn-mf1.heartyhosting.com%2Fsites%2Fmensfitness.com%2Ffiles%2Fthe_10-minute_belly-off_workout_main.jpg&f=1");
-  background-size: cover;
+    grid-area: item-c;
+    background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn-mf1.heartyhosting.com%2Fsites%2Fmensfitness.com%2Ffiles%2Fthe_10-minute_belly-off_workout_main.jpg&f=1");
+    background-size: cover;
 }
 .item-d {
-  grid-area: item-d;
-  background-image: url("https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.self.com%2Fphotos%2F5867a314bf5e49f716efe864%2Fmaster%2Fpass%2Fworkout-package_1.png&f=1");
-  background-size: cover;
-  background-position: center;
+    grid-area: item-d;
+    background-image: url("https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.self.com%2Fphotos%2F5867a314bf5e49f716efe864%2Fmaster%2Fpass%2Fworkout-package_1.png&f=1");
+    background-size: cover;
+    background-position: center;
 }
 .item-e {
-  grid-area: item-e;
-  background-color: #dd550c;
+    grid-area: item-e;
+    background-color: #dd550c;
 }
 .item-f {
-  grid-area: item-f;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-handsome-man-doing-biceps-lifting-barbell-on-bench-in-a-gym-577492996.jpg);
-  background-size: cover;
+    grid-area: item-f;
 }
-
 .item-g {
-  grid-area: item-g;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-men-with-battle-rope-in-functional-training-fitness-gym-363373637.jpg);
-  background-size: cover;
+    grid-area: item-g;
 }
-
 .item-h {
-  grid-area: item-h;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-loft-big-empty-interior-of-the-gym-for-fitness-workout-cross-power-training-nobody-ropes-rowing-677437255.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+    grid-area: item-h;
 }
-
 .item-i {
-  grid-area: item-i;
-  background-color: #03244d;
+    grid-area: item-i;
+    background-color: #03244d
 }
 .item-j {
-  grid-area: item-j;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-handsome-weightlifter-preparing-for-training-shallow-depth-of-field-selective-focus-on-hands-and-366605333.jpg);
-  background-size: cover;
+    grid-area: item-j;
 }
 .item-k {
-  grid-area: item-k;
-  background-image: url(https://image.shutterstock.com/z/stock-photo-young-man-and-woman-wearing-training-hardly-on-cycling-machines-in-light-spacious-gym-564014422.jpg);
-  background-size: cover;
+    grid-area: item-k;
+}
+
+.container {
+    margin: 75px auto;
+    display: grid;
+    grid:    
+        [row1-start] "item-a item-b item-b item-c item-c item-d item-d" 130px [row1-end]
+        [row2-start] "item-a item-b item-b item-c item-c item-d item-d" 130px [row2-end]
+        [row3-start] "item-e item-f item-f item-g item-g item-g item-g" 130px [row3-end]
+        [row4-start] "item-h item-h item-h item-h item-h item-h item-h" 130px [row4-end]
+        [row5-start] "item-i item-j item-j item-k item-k item-k item-k" 130px [row5-end]
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-gap: 7px;
+    justify-items: stretch;
+    align-items: stretch;
 }
 
 .grid-item__drop-down {
-  position: relative;
-  top: 200px;
-  widows: 100%;
-  min-height: 200px;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: all 0.3s ease;
-  color: white;
-  text-align: center;
+    position: relative;
+    top: 220px;
+    widows: 100%;
+    min-height: 240px;
+    background-color: rgba(0,0,0,.6);
+    transition: all .3s ease;
+    color: white;
+    text-align: center;
 }
 
 .grid-item__drop-down h2 {
-  margin: 0;
+    margin:0;
 }
 
+
 .grid-item__drop-down:hover {
-  top: 50px;
-  transition: all 0.3s ease;
+    top: 50px;
+    transition: all .3s ease;
 }
 
 .footer {
@@ -385,15 +407,3 @@ input[type='radio']:checked:after {
   position: relative;
   font-size: 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
