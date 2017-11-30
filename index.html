@@ -9,18 +9,20 @@
     <body>
       <header class="header">
         <div class="header__static">
-          <div class="static-header__hours">Open 24/7</div>
-          <div class="static-header__links">
-            <ul>
-              <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="http://instagram.com/"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-            </ul>
+          <div class="content-container">
+            <div class="static-header__hours">Open 24/7</div>
+            <div class="static-header__links">
+              <ul>
+                <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        </div>
-        <div class="content-container">
-          <nav class="header__nav">
+
+        <nav class="header__nav">
+          <div class="content-container">
             <div class="nav-header__name">TIGER IRON</div>
             <div class="nav-header__nav">
               <a class="header-nav header-nav__link">HOME</a>
@@ -30,22 +32,29 @@
               <a class="header-nav header-nav__link">SERVICES</a>
               <a class="header-nav header-nav__link">TRAINERS</a>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
         <div class="header__jumbotron">
-          <div class="content-container">
-            <figure class="jumbotron__logo">
-              <img src="./images/tiger_iron_logo.svg" </figure>
+          <div class="jumbotron__static-content">
+              <figure class="jumbotron__logo">
+                  <img src="./images/tiger_iron_logo.svg">
+              </figure>
               <figure class="jumbotron__content">
-                <h2>WELCOME TO</h2>
-                <h1>TIGER IRON GYM</h1>
-                <p>Lorem ipsum dolor sit amet, cu bonorum corrumpit urbanitas sed. Ei sit suas nostrud lobortis. Eirmod laboramus mea ex, eam prima consetetur ei. Has mentitum imperdiet ad, in virtute periculis consetetur duo. Eos ad molestiae interpretaris.</p>
+                  <h2>WELCOME TO</h2>
+                  <h1>TIGER IRON GYM</h1>
+                  <p>Lorem ipsum dolor sit amet, cu bonorum corrumpit urbanitas sed. Ei sit suas nostrud lobortis. Eirmod laboramus mea ex, eam prima consetetur ei. Has mentitum imperdiet ad, in virtute periculis consetetur duo. Eos ad molestiae interpretaris.</p>
               </figure>
           </div>
-        </div>
-      </header>
+          <input id="slide-1-trigger" type="radio" name="slides" checked>
+          <section class="slide slide-one"></section>
+          <input id="slide-2-trigger" type="radio" name="slides">
+          <section class="slide slide-two"></section>
+          <input id="slide-3-trigger" type="radio" name="slides">
+          <section class="slide slide-three"></section>
+      </div>
+  </header>
       <main class="main">
-        <div class="content-container">
+        <div class="content-container content-container-grid">
           <div class="container">
             <div class="grid-item item-a"></div>
             <div class="grid-item item-b">
