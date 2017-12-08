@@ -26,7 +26,12 @@ body {
   font-family: sans-serif;
 }
 
-.header__static .content-container {
+.header_social{
+  padding-right: 23px;
+}
+
+.header__static .content-container,
+.header__nav .content-container {
   display: flex;
   justify-content: space-between;
 }
@@ -89,7 +94,7 @@ ul li a i {
 }
 
 .header-nav__link {
-  width: 90px;
+  width: 110px;
   text-align: center;
 }
 
