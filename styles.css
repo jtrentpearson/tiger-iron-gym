@@ -12,9 +12,6 @@ body {
 .content-container {
   width: 80%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   height: 100%;
 }
 
@@ -29,6 +26,11 @@ body {
   font-family: sans-serif;
 }
 
+.header__static .content-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .static-header__hours {
   color: #dd550c;
   letter-spacing: 0.2em;
@@ -40,13 +42,15 @@ body {
   text-align: right;
   margin:0;
   color: #ffffff;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   font-size: 1.2em;
 }
 
 ul li a i:hover {
   color: #ffffff;
-  transition: all 0.3s ease; 
+  transition: all 0.4s ease; 
+  cursor: pointer;
+  transform: scale(1.3);
 }
 
 li {
@@ -55,7 +59,7 @@ li {
 }
 
 .header__nav {
-  height: 70px;
+  height: 65px;
   display: flex;
   justify-content: space-between;
   background-color: rgb(230, 230, 230);
@@ -78,7 +82,7 @@ ul li a i {
 
 .nav-header__name {
   letter-spacing: .2em;
-  font-size: 1.8em;
+  font-size: 2.5em;
   color: #03244d;
   text-shadow: #dd550c 0 0 .2em;
   font-weight: bold;
@@ -92,7 +96,8 @@ ul li a i {
 .header-nav__link:hover {
   background-color: #dd550c;
   color: white;
-  transition: all 0.2s ease 0s;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
 }
 
 .header__jumbotron {
@@ -316,6 +321,7 @@ input[type='radio']:checked:after {
 .grid-item__drop-down:hover {
   top: 50px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .footer {
@@ -353,8 +359,11 @@ input[type='radio']:checked:after {
 }
 
 .footer__topnav:hover {
-  top: 25px;
+  top: 35px;
   transition: all .3s ease;
+  cursor: pointer;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
 
 .footer__topnav h2 {
@@ -386,13 +395,52 @@ input[type='radio']:checked:after {
   font-size: 2em;
 }
 
+.footer__bottomnav {
+  margin-bottom: 0;
+}
+.footer__bottomnav ul {
+  padding: 0;
+}
 
+.footer__info {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 
+.footer__info ul {
+  padding: 0;
+}
 
+.footer__info ul li {
+  color: white;
+  font-family:sans-serif;
+  display: block;
+  letter-spacing: .1em;
+  line-height: 1.5em;
+  margin: auto;
+}
 
+.gym-info {
+  text-align: left;
+}
 
+.other-info {
+  text-align: center;
+}
+.womens-gym-info {
+  text-align: right;
+}
 
+.footer .content-container {
+  display: flex;
+  flex-direction: column;
+}
 
+.fa {
+  margin: .65em;
+}
 
 
 
