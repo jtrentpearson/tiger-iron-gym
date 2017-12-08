@@ -12,9 +12,6 @@ body {
 .content-container {
   width: 80%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   height: 100%;
 }
 
@@ -27,6 +24,11 @@ body {
   height: 50px;
   background-color: #03244d;
   font-family: sans-serif;
+}
+
+.header__static .content-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .static-header__hours {
@@ -357,9 +359,11 @@ input[type='radio']:checked:after {
 }
 
 .footer__topnav:hover {
-  top: 25px;
+  top: 35px;
   transition: all .3s ease;
   cursor: pointer;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
 
 .footer__topnav h2 {
@@ -394,6 +398,20 @@ input[type='radio']:checked:after {
 .footer__bottomnav {
   margin-bottom: 0;
 }
+.footer__bottomnav ul {
+  padding: 0;
+}
+
+.footer__info {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__info ul {
+  padding: 0;
+}
 
 .footer__info ul li {
   color: white;
@@ -405,14 +423,24 @@ input[type='radio']:checked:after {
 }
 
 .gym-info {
-  text-align: center;
+  text-align: left;
 }
 
+.other-info {
+  text-align: center;
+}
 .womens-gym-info {
-  text-align: center;
+  text-align: right;
 }
 
+.footer .content-container {
+  display: flex;
+  flex-direction: column;
+}
 
+.fa {
+  margin: .65em;
+}
 
 
 
