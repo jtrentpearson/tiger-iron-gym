@@ -99,12 +99,13 @@ ul li a i {
 }
 
 .header-nav__link {
+  height: 85%;
   width: 110px;
   text-align: center;
 }
 
 .header-nav__link:hover {
-  border-bottom: 2px solid #dd550c;
+  border-bottom: 3px solid #dd550c;
   color: #dd550c;
   transition: all 0.15s ease 0s;
   cursor: pointer;
@@ -144,6 +145,7 @@ ul li a i {
 .jumbotron__logo,
 .jumbotron__content {
     align-self: center;
+    margin: 0;
 }
 
 
@@ -325,7 +327,8 @@ input[type='radio']:checked:after {
 }
 
 .grid-item__drop-down h2 {
-  margin: 0;
+  margin: 0px;
+  padding: 8px;
 }
 
 .grid-item__drop-down:hover {
@@ -371,8 +374,8 @@ input[type='radio']:checked:after {
   top: 33px;
   transition: all .3s ease;
   cursor: pointer;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .footer__topnav h2 {
