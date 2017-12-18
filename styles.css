@@ -109,6 +109,7 @@ ul li a i {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+  border-bottom: 3px solid #dd550c;
   color: #dd550c;
   cursor: pointer;
   letter-spacing: .25em;
@@ -139,6 +140,7 @@ ul li a i {
   overflow: hidden;
   background-color: #03244d;
   position: relative;
+  box-shadow: 10px 7px 14px #0000004a;
 }
 
 .header__jumbotron input {
@@ -150,8 +152,8 @@ ul li a i {
 .jumbotron__content {
   text-align: right;
   margin : 0px;
-  width: 400px;
-  color: rgb(230, 230, 230);
+  width: 600px;
+  color: white;
   right: 0;
 }
 
@@ -227,10 +229,13 @@ input[type='radio']:after {
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 1px solid white;
+  border: .5px solid white;
+  box-shadow: 0px 0px 2px 0px white inset;
 }
 
 input[type='radio']:checked:after {
+  transition: all 0.3s ease;  
+  transform: scale(1.1);
   position: relative;
   background-color: #dd550c;
 } 
@@ -413,15 +418,29 @@ input[type='radio']:checked:after {
   top: 33px;
   transition: all .3s ease;
   cursor: pointer;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+}
+
+.footer__topnav:hover p{
+  color: white;
+  transition: all .3s ease;
 }
 
 .footer__topnav h2 {
   top: -4;
   position: relative;
   z-index: 10;  
+  margin-bottom: 0;
 }
+
+.footer__topnav p {
+  color: #dd550c;
+  margin: 0;
+}
+
+.footer__topnav--b p {
+  color: #f68026  ;
+}
+
 .footer__topnav--b {
   background-color: #f68026
 }
@@ -470,6 +489,7 @@ input[type='radio']:checked:after {
   letter-spacing: .1em;
   line-height: 1.5em;
   margin: auto;
+  font-size: .8em;
 }
 
 .gym-info {
