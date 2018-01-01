@@ -27,7 +27,7 @@ body {
 }
 
 .header_social {
-  padding-right: 30px;
+  padding-right: 6px;
 }
 
 .header__static .content-container,
@@ -93,6 +93,44 @@ ul li a i {
   display: flex;
 }
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  align-self: center
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10000;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 0px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
 .nav-header__name {
   letter-spacing: .1em;
   font-size: 2.75em;
@@ -102,10 +140,15 @@ ul li a i {
 
 .header-nav__link {
   height: 85%;
-  width: 110px;
+  width: 120px;
   text-align: center;
+  border: none;
+  background-color: inherit;
+  font-size: inherit;
+  align-self: center
 }
 
+.dropdown:hover .header-nav__link,
 .header-nav__link:hover {
   border-bottom: 3px solid #dd550c;
   color: #dd550c;
